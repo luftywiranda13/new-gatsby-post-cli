@@ -21,8 +21,8 @@ it('creates new blog post', async () => {
 
   expect(content).toBe(dedent`
       ---
-      date: '2013-08-05'
-      title: At Least I Tried
+      date: "2013-08-05"
+      title: "At Least I Tried"
       ---\n
     `);
 });

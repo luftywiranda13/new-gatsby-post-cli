@@ -27,7 +27,7 @@
     "dateformat": "^3.0.2",
     "inquirer": "^4.0.1",
     "log-symbols": "^2.1.0",
-    "new-gatsby-post": "^1.0.1"
+    "new-gatsby-post": "^1.0.2"
   },
   "devDependencies": {
     "dedent": "^0.7.0",
