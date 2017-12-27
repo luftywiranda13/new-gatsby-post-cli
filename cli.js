@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 'use strict';
 
+const path = require('path');
+
 const chalk = require('chalk');
 const dateFormat = require('dateformat');
 const inquirer = require('inquirer');
@@ -14,7 +16,7 @@ inquirer
       type: 'input',
       name: 'location',
       message: 'Location:',
-      default: './src/pages/blog',
+      default: path.normalize('./src/pages/blog'),
     },
     {
       type: 'input',
