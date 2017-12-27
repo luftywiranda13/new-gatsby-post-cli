@@ -13,8 +13,11 @@
     "node": ">=8"
   },
   "scripts": {
+    "lint": "xo",
     "precommit": "remove-lockfiles && xo --fix && lint-staged",
-    "test": "xo && jest"
+    "pretest": "npm run lint",
+    "test:watch": "jest --watch",
+    "test": "jest"
   },
   "bin": {
     "new-gatsby-post": "cli.js"
