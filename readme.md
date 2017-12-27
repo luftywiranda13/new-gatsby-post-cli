@@ -1,7 +1,5 @@
 # new-gatsby-post-cli
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/luftywiranda13/new-gatsby-post-cli.svg)](https://greenkeeper.io/)
-
 [![Package Version](https://img.shields.io/npm/v/new-gatsby-post-cli.svg)](https://www.npmjs.com/package/new-gatsby-post-cli)
 [![Build Status: Linux](https://img.shields.io/travis/luftywiranda13/new-gatsby-post-cli/master.svg)](https://travis-ci.org/luftywiranda13/new-gatsby-post-cli)
 [![Build status: Windows](https://ci.appveyor.com/api/projects/status/879o0bi0rn5up0dr/branch/master?svg=true)](https://ci.appveyor.com/project/luftywiranda13/new-gatsby-post-cli/branch/master)
