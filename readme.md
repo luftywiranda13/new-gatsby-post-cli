@@ -9,6 +9,7 @@ An interactive CLI tool to scaffold out a new [Gatsby](https://www.gatsbyjs.org/
 
 ## Why
 
+* Generates folder structure and `frontmatter`
 * Easy to use
 * Interactive CLI
 
