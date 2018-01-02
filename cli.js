@@ -7,7 +7,6 @@ const chalk = require('chalk');
 const dateFormat = require('dateformat');
 const inquirer = require('inquirer');
 const logSymbols = require('log-symbols');
-
 const newGatsbyPost = require('new-gatsby-post');
 
 inquirer
@@ -22,6 +21,7 @@ inquirer
       type: 'input',
       name: 'title',
       message: 'Title:',
+      validate: x => (x.length > 0 ? true : '`Title` is required'),
     },
     {
       type: 'input',
