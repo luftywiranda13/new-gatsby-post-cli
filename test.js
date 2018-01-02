@@ -1,10 +1,8 @@
 'use strict';
 
-const path = require('path');
-
-const { fs } = require('mz');
-const dedent = require('dedent');
 const { ENTER } = require('inquirer-test');
+const dedent = require('dedent');
+const fs = require('fs-extra');
 const run = require('inquirer-test');
 
 it('creates new blog post', async () => {
@@ -15,7 +13,7 @@ it('creates new blog post', async () => {
     ['./src/pages/blog', ENTER, 'At least I tried', ENTER, '2013-08-05', ENTER]
   );
   const content = await fs.readFile(
-    path.normalize('./src/pages/blog/2013-08-05-at-least-i-tried/index.md'),
+    './src/pages/blog/2013-08-05-at-least-i-tried/index.md',
     'utf8'
   );
 
