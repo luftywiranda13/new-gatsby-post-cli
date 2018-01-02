@@ -48,11 +48,7 @@
     "testEnvironment": "node"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.md": [
+    "*.{js,md}": [
       "prettier --write",
       "git add"
     ]
