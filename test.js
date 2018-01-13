@@ -1,8 +1,8 @@
 'use strict';
 
 const { ENTER } = require('inquirer-test');
+const { readFile } = require('fs-extra');
 const dedent = require('dedent');
-const fs = require('fs-extra');
 const run = require('inquirer-test');
 
 it('requires `title` to be specified', async () => {
@@ -23,7 +23,7 @@ it('creates new blog post', async () => {
     ['./cli.js'],
     ['./src/pages/blog', ENTER, 'At least I tried', ENTER, '2013-08-05', ENTER]
   );
-  const content = await fs.readFile(
+  const content = await readFile(
     './src/pages/blog/2013-08-05-at-least-i-tried/index.md',
     'utf8'
   );

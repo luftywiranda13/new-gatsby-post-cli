@@ -1,7 +1,7 @@
 {
   "name": "new-gatsby-post-cli",
   "version": "1.1.1",
-  "description": "An interactive CLI to scaffold out a new Gatsby post",
+  "description": "Interactive CLI to scaffold out a new Gatsby post",
   "license": "MIT",
   "repository": "https://github.com/luftywiranda13/new-gatsby-post-cli",
   "author": {
@@ -13,9 +13,8 @@
     "node": ">=8"
   },
   "scripts": {
-    "lint": "xo",
     "precommit": "remove-lockfiles && xo --fix && lint-staged",
-    "pretest": "npm run lint",
+    "lint": "xo",
     "test:watch": "jest --watch",
     "test": "jest"
   },
@@ -38,9 +37,9 @@
     "fs-extra": "^5.0.0",
     "husky": "^0.14.3",
     "inquirer-test": "^2.0.1",
-    "jest": "^22.0.4",
+    "jest": "^22.0.6",
     "lint-staged": "^6.0.0",
-    "prettier": "^1.9.2",
+    "prettier": "^1.10.2",
     "remove-lockfiles": "^2.0.4",
     "xo": "^0.18.2"
   },
@@ -48,7 +47,7 @@
     "testEnvironment": "node"
   },
   "lint-staged": {
-    "*.{js,md}": [
+    "*.{js,json,md}": [
       "prettier --write",
       "git add"
     ]

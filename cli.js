@@ -1,12 +1,11 @@
 #!/usr/bin/env node
 'use strict';
 
-const path = require('path');
-
-const chalk = require('chalk');
+const { normalize } = require('path');
+const { error, success } = require('log-symbols');
+const { green, red } = require('chalk');
 const dateFormat = require('dateformat');
 const inquirer = require('inquirer');
-const logSymbols = require('log-symbols');
 const newGatsbyPost = require('new-gatsby-post');
 
 inquirer
@@ -15,7 +14,7 @@ inquirer
       type: 'input',
       name: 'location',
       message: 'Location:',
-      default: path.normalize('./src/pages/blog'),
+      default: normalize('./src/pages/blog'),
     },
     {
       type: 'input',
@@ -38,10 +37,10 @@ inquirer
   )
   .then(path => {
     console.log();
-    console.log(logSymbols.success, chalk.green('Created:'));
+    console.log(success, green('Created:'));
     console.log(path);
   })
   .catch(err => {
     console.log();
-    console.log(logSymbols.error, chalk.red(err));
+    console.log(error, red(err));
   });

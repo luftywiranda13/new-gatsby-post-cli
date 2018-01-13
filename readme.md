@@ -1,11 +1,11 @@
 # new-gatsby-post-cli
 
-[![Package Version](https://img.shields.io/npm/v/new-gatsby-post-cli.svg)](https://www.npmjs.com/package/new-gatsby-post-cli)
-[![Build Status: Linux](https://img.shields.io/travis/luftywiranda13/new-gatsby-post-cli/master.svg)](https://travis-ci.org/luftywiranda13/new-gatsby-post-cli)
-[![Build status: Windows](https://ci.appveyor.com/api/projects/status/879o0bi0rn5up0dr/branch/master?svg=true)](https://ci.appveyor.com/project/luftywiranda13/new-gatsby-post-cli/branch/master)
-[![Downloads Status](https://img.shields.io/npm/dm/new-gatsby-post-cli.svg)](https://npm-stat.com/charts.html?package=new-gatsby-post-cli&from=2016-04-01)
+[![Package Version](https://img.shields.io/npm/v/new-gatsby-post-cli.svg?style=flat-square)](https://www.npmjs.com/package/new-gatsby-post-cli)
+[![Downloads Status](https://img.shields.io/npm/dm/new-gatsby-post-cli.svg?style=flat-square)](https://npm-stat.com/charts.html?package=new-gatsby-post-cli&from=2016-04-01)
+[![Build Status: Linux](https://img.shields.io/travis/luftywiranda13/new-gatsby-post-cli/master.svg?style=flat-square)](https://travis-ci.org/luftywiranda13/new-gatsby-post-cli)
+[![Build Status: Windows](https://img.shields.io/appveyor/ci/luftywiranda13/new-gatsby-post-cli/master.svg?style=flat-square&logo=appveyor)](https://ci.appveyor.com/project/luftywiranda13/new-gatsby-post-cli/branch/master)
 
-An interactive CLI tool to scaffold out a new [Gatsby](https://www.gatsbyjs.org/) post
+Interactive CLI tool to scaffold out a new [Gatsby](https://www.gatsbyjs.org/) post
 
 ## Why
 
