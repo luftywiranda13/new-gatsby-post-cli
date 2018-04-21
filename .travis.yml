@@ -3,10 +3,6 @@ notifications:
   email: false
 node_js:
   - '8'
-script:
-  - npm run lint
-  - node node_modules/.bin/prettier -l "*.{js,json,md}"
-  - npm test
 branches:
   only:
     - master

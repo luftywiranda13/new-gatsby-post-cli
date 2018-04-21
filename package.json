@@ -13,10 +13,9 @@
     "node": ">=8"
   },
   "scripts": {
-    "precommit": "remove-lockfiles && xo --fix && lint-staged",
-    "lint": "xo",
+    "precommit": "remove-lockfiles && lint-staged",
     "test:watch": "jest --watch",
-    "test": "jest"
+    "test": "xo && jest"
   },
   "bin": {
     "new-gatsby-post": "cli.js"
@@ -33,13 +32,11 @@
   },
   "devDependencies": {
     "dedent": "^0.7.0",
-    "eslint-config-prettier": "^2.9.0",
     "fs-extra": "^5.0.0",
     "husky": "^0.14.3",
     "inquirer-test": "^2.0.1",
     "jest": "^22.0.6",
     "lint-staged": "^7.0.0",
-    "prettier": "^1.10.2",
     "remove-lockfiles": "^2.0.4",
     "xo": "^0.20.3"
   },
@@ -47,20 +44,28 @@
     "testEnvironment": "node"
   },
   "lint-staged": {
-    "*.{js,json,md}": [
+    "*.js": [
+      "xo --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
       "prettier --write",
       "git add"
     ]
   },
   "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5"
+    "bracketSpacing": true,
+    "singleQuote": true
   },
   "xo": {
-    "extends": "prettier",
     "envs": [
       "jest"
-    ]
+    ],
+    "prettier": true,
+    "space": true,
+    "rules": {
+      "promise/prefer-await-to-then": 0
+    }
   },
   "keywords": [
     "gatsby",

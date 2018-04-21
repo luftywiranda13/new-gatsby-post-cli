@@ -5,17 +5,6 @@ const { readFile } = require('fs-extra');
 const dedent = require('dedent');
 const run = require('inquirer-test');
 
-it('requires `title` to be specified', async () => {
-  expect.assertions(1);
-
-  const output = await run(
-    ['./cli.js'],
-    ['./src/pages/blog', ENTER, '', ENTER]
-  );
-
-  expect(output).toMatch(/`Title` is required/);
-});
-
 it('creates new blog post', async () => {
   expect.assertions(1);
 
