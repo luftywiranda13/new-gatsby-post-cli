@@ -28,7 +28,8 @@
     "dateformat": "^3.0.2",
     "inquirer": "^5.0.0",
     "log-symbols": "^2.1.0",
-    "new-gatsby-post": "^1.0.3"
+    "new-gatsby-post": "^1.0.3",
+    "yargs": "^11.0.0"
   },
   "devDependencies": {
     "dedent": "^0.7.0",

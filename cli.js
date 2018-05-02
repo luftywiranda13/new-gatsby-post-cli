@@ -8,30 +8,44 @@ const dateFormat = require('dateformat');
 const inquirer = require('inquirer');
 const newGatsbyPost = require('new-gatsby-post');
 
+// eslint-disable-next-line prefer-destructuring
+const argv = require('yargs')
+  .usage('Usage: $0 [options]')
+  .alias('l', 'location')
+  .nargs('l', 1)
+  .describe('l', 'New post location')
+  .help('h')
+  .alias('h', 'help').argv;
+
+const prompt = [
+  {
+    type: 'input',
+    name: 'title',
+    message: 'Title:',
+    validate: x => (x.length > 0 ? true : '`Title` is required'),
+  },
+  {
+    type: 'input',
+    name: 'date',
+    message: 'Date (yyyy-mm-dd):',
+    default: dateFormat(Date.now(), 'isoDate'),
+  },
+];
+
+if (!argv.location) {
+  prompt.unshift({
+    type: 'input',
+    name: 'location',
+    message: 'Location:',
+    default: normalize('./src/pages/blog'),
+  });
+}
+
 inquirer
-  .prompt([
-    {
-      type: 'input',
-      name: 'location',
-      message: 'Location:',
-      default: normalize('./src/pages/blog'),
-    },
-    {
-      type: 'input',
-      name: 'title',
-      message: 'Title:',
-      validate: x => (x.length > 0 ? true : '`Title` is required'),
-    },
-    {
-      type: 'input',
-      name: 'date',
-      message: 'Date (yyyy-mm-dd):',
-      default: dateFormat(Date.now(), 'isoDate'),
-    },
-  ])
+  .prompt(prompt)
   .then(answers =>
     newGatsbyPost(answers.title, {
-      location: answers.location,
+      location: argv.location || answers.location,
       date: answers.date,
     })
   )
