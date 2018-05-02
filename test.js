@@ -40,7 +40,7 @@ it('creates new blog post with --location parameter', async () => {
   expect(content).toBe(dedent`
     ---
     date: "2013-08-06"
-    title: "I did not try"
+    title: "I Did Not Try"
     ---\n
   `);
 });
@@ -60,7 +60,7 @@ it('creates new blog post with -l parameter', async () => {
   expect(content).toBe(dedent`
     ---
     date: "2013-08-07"
-    title: "I gave up"
+    title: "I Gave Up"
     ---\n
   `);
 });
