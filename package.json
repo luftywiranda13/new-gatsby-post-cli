@@ -26,7 +26,7 @@
   "dependencies": {
     "chalk": "^2.3.0",
     "dateformat": "^3.0.2",
-    "inquirer": "^5.0.0",
+    "inquirer": "^6.2.1",
     "log-symbols": "^2.1.0",
     "new-gatsby-post": "^1.0.3"
   },
